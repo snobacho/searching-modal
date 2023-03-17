@@ -9,17 +9,35 @@
 </head>
 <body>
     <button id="open-modal-btn"> Press Me </button>
-    <div id="search-modal" class="modal">
+    <div id="search-modal">
         <div class="modal-content">
             <div class="modal-header">
                 <span id="close-modal">&times;</span>
             </div>
+            <input type="search" id="search-input" placeholder="შეიყვანეთ საკვანძო სიტყვები">            
             <div class="modal-body">
-                <p>Modal body...</p>
+                <h2 class="searching-heder">ძებნის არეალი: </h2>
+                <div class="searching-labels">
+                    <label>
+                        <input type="radio" name="search" value="opac" checked>
+                        ბიბლიოთეკის კატალოგი
+                    </label>
+                    <label>
+                        <input type="radio" name="search" value="openlibrary" class="radio">
+                        ციფრული არქივი
+                    </label>
+                    <label>
+                        <input type="radio" name="search" value="openscience">
+                        ქართული სამეცნიერო ნაშრომების ციფრული საცავი
+                    </label>
+                    <label>
+                        <input type="radio" name="search" value="openjournals">
+                        ქართული სამეცნიერო ჟურნალები
+                    </label>
+                </div>
             </div>
             <button id="search-btn">ძებნა</button>
         </div>
-    </div>
     <script src="./script.js"></script>
 </body>
 </html>
