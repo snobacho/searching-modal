@@ -9,6 +9,11 @@ openModalBtn.onclick = () => {
 closeModal.onclick = () => {
   searchModal.style.display = "none";
 }
+window.addEventListener("click", (event) => {
+  if (event.target === searchModal) {
+    searchModal.style.display = "none";
+  }
+});
 searchBtn.onclick = () => {
   const link = getLink();
   if (link) {
@@ -57,3 +62,4 @@ searchInput.addEventListener('keyup', event => {
     }
   }
 });
+
